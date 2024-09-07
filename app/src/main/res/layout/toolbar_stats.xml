@@ -41,7 +41,7 @@
                 android:layout_marginStart="12dp"
                 android:layout_weight="1"
                 android:gravity="start"
-                android:text="Antenas"
+                android:text="TeleGame"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 android:textStyle="bold"
