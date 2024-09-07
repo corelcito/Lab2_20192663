@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/option_verde"
+        android:title="Verde" />
+    <item
+        android:id="@+id/option_rojo"
+        android:title="Rojo" />
+    <item
+        android:id="@+id/option_morado"
+        android:title="Morado" />
+</menu>
