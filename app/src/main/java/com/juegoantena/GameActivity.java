@@ -85,6 +85,17 @@ public class GameActivity extends AppCompatActivity {
         playerStats.addNamePlayer(getIntent().getExtras().getString("name"));
         toolbar = findViewById(R.id.toolbar);
         btnStats = toolbar.findViewById(R.id.btn_stats);
+
+        // Encuentra el botón de retroceso
+        ImageView btnBack = toolbar.findViewById(R.id.btn_back);
+
+        // Configura el OnClickListener para el botón de retroceso
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed(); // Regresa a la actividad anterior
+            }
+        });
         hangmanParts = new ImageView[] {
                 findViewById(R.id.img_head),
                 findViewById(R.id.img_body),

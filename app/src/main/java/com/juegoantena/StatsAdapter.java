@@ -28,22 +28,19 @@ public class StatsAdapter extends RecyclerView.Adapter<StatsAdapter.StatsViewHol
         GameResult gameResult = playerStats.getGameResults().get(position);
 
         String resultText;
-        switch (gameResult.getResultType()) {
-            case WIN:
-                resultText = "Juego " + (position + 1) + ": Ganó en " + gameResult.getTimeInSeconds() + " segundos";
-                break;
-            case LOSE:
-                resultText = "Juego " + (position + 1) + ": Perdió";
-                break;
-            case CANCELLED:
-                resultText = "Juego " + (position + 1) + ": Cancelado";
-                break;
-            default:
-                resultText = "";
+        if (gameResult.getResultType() == ResultType.WIN) {
+            resultText = "Juego " + (position + 1) + ": Ganó en " + gameResult.getTimeInSeconds() + " segundos";
+        } else if (gameResult.getResultType() == ResultType.LOSE) {
+            resultText = "Juego " + (position + 1) + ": Perdió";
+        } else if (gameResult.getResultType() == ResultType.CANCELLED) {
+            resultText = "Juego " + (position + 1) + ": Cancelado";
+        } else {
+            resultText = "";
         }
 
         holder.textStat.setText(resultText);
     }
+
 
     @Override
     public int getItemCount() {
