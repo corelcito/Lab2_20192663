@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
                 popupMenu.show();
             }
         });
-
+//el boton de play no deberia poder funcionar sin antes proporcionar un nombre
         btnPlay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

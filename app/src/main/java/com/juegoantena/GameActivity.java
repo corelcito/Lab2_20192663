@@ -108,7 +108,8 @@ public class GameActivity extends AppCompatActivity {
         textViewMessage  = findViewById(R.id.text_message);
         btnNewGame = findViewById(R.id.btn_new_game);
         rvLetters = findViewById(R.id.rv_letters);
-
+//solicite a una IA que me diera alguna forma de que el mismo diseño de la letra (letter) se reutilizara
+        // a la cual me proporciono utilizar adapter grid
         startNewGame();
 
         btnStats.setOnClickListener(new View.OnClickListener() {
